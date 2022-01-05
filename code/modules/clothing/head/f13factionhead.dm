@@ -236,6 +236,10 @@
 	dynamic_hair_suffix = ""
 	dynamic_fhair_suffix = ""
 
+/obj/item/clothing/head/helmet/f13/raider/legion/Initialize()
+	. = ..()
+	AddComponent(/datum/component/armor_plate)
+
 /obj/item/clothing/head/helmet/f13/legion/marsheaddress
 	name = "priestess' headdress"
 	desc = "(III) A headdress made of feathers and decorated with two golden tassles."
@@ -245,16 +249,17 @@
 
 /obj/item/clothing/head/helmet/f13/legion/recruit
 	name = "legion recruit helmet"
-	desc = "(III) It's a leather skullcap issued to recruits."
+	desc = "(II) It's a leather skullcap issued to recruits."
 	icon_state = "legion-recruit"
 	item_state = "legion-recruit"
+	armor = list("tier" = 2, "energy" = 10, "bomb" = 16, "bio" = 30, "rad" = 20, "fire" = 50, "acid" = 0)
 
 /obj/item/clothing/head/helmet/f13/legion/prime
 	name = "legion prime helmet"
-	desc = "(IV) A helmet from reinforced leather with a red peak."
+	desc = "(III) A helmet from reinforced leather with a red peak."
 	item_state = "legion-prime"
 	icon_state = "legion-prime"
-	armor = list("tier" = 4, "energy" = 15, "bomb" = 25, "bio" = 40, "rad" = 20, "fire" = 60, "acid" = 0)
+	armor = list("tier" = 3, "energy" = 15, "bomb" = 25, "bio" = 40, "rad" = 20, "fire" = 60, "acid" = 0)
 
 /obj/item/clothing/head/helmet/f13/legion/prime/slavemaster
 	name = "slavemaster helmet"
@@ -267,26 +272,26 @@
 
 /obj/item/clothing/head/helmet/f13/legion/vet
 	name = "legion veteran helmet"
-	desc = "(V) It's a metal legion veteran helmet, clearly inspired by old world sports uniforms."
+	desc = "(IV) It's a metal legion veteran helmet, clearly inspired by old world sports uniforms."
 	icon_state = "legion-veteran"
 	item_state = "legion-veteran"
-	armor = list("tier" = 5, "energy" = 15, "bomb" = 25, "bio" = 50, "rad" = 20, "fire" = 70, "acid" = 0)
+	armor = list("tier" = 4, "energy" = 15, "bomb" = 25, "bio" = 50, "rad" = 20, "fire" = 70, "acid" = 0)
 
 /obj/item/clothing/head/helmet/f13/legion/vet/explorer
 	name = "legion explorer hood"
-	desc = "(V) It's a leather hood with metal reinforcments and built in headphones to plug the radio into."
+	desc = "(IV) It's a leather hood with metal reinforcments and built in headphones to plug the radio into."
 	icon_state = "legion-explorer"
 	item_state = "legion-explorer"
 
 /obj/item/clothing/head/helmet/f13/legion/vet/combvexil
 	name = "legion bear vexillarius helmet"
-	desc = "(V) This helmet is decorated with the pelt of a ashland bear."
+	desc = "(IV) This helmet is decorated with the pelt of a ashland bear."
 	icon_state = "legion-vex"
 	item_state = "legion-vex"
 
 /obj/item/clothing/head/helmet/f13/legion/vet/vexil
 	name = "legion fox vexillarius helmet"
-	desc = "(V) This helmet is decorated with the pelt of a desert fox."
+	desc = "(IV) This helmet is decorated with the pelt of a desert fox."
 	icon_state = "legion-vex-alt"
 	item_state = "legion-vex-alt"
 
@@ -299,24 +304,24 @@
 
 /obj/item/clothing/head/helmet/f13/legion/recruit/decan
 	name = "legion recruit decanus helmet"
-	desc = "(V) This reinforced leather helmet has a plume of black and dark red feathers."
+	desc = "(III) This reinforced leather helmet has a plume of black and dark red feathers."
 	icon_state = "legion-decrec"
 	item_state = "legion-decrec"
-	armor = list("tier" = 5, "energy" = 15, "bomb" = 25, "bio" = 50, "rad" = 20, "fire" = 70, "acid" = 0)
+	armor = list("tier" = 4, "energy" = 15, "bomb" = 25, "bio" = 50, "rad" = 20, "fire" = 70, "acid" = 0)
 
 /obj/item/clothing/head/helmet/f13/legion/prime/decan
 	name = "legion prime decanus helmet"
-	desc = "(V) This reinforced leather helmet with a red peak has a plume of black feathers."
+	desc = "(IV) This reinforced leather helmet with a red peak has a plume of black feathers."
 	item_state = "legion-decprime"
 	icon_state = "legion-decprime"
-	armor = list("tier" = 5, "energy" = 15, "bomb" = 25, "bio" = 50, "rad" = 20, "fire" = 70, "acid" = 0)
+	armor = list("tier" = 4, "energy" = 15, "bomb" = 25, "bio" = 50, "rad" = 20, "fire" = 70, "acid" = 0)
 
 /obj/item/clothing/head/helmet/f13/legion/heavy
 	name = "reinforced legion veteran decanus helmet"
-	desc = "(VI) A metal helmet with ballistic visor and a plume, denoting veteran Decanus status."
+	desc = "(V) A metal helmet with ballistic visor and a plume, denoting veteran Decanus status."
 	icon_state = "legion-decvet"
 	item_state = "legion-decvet"
-	armor = list("tier" = 6, "energy" = 15, "bomb" = 25, "bio" = 60, "rad" = 20, "fire" = 75, "acid" = 10)
+	armor = list("tier" = 5, "energy" = 15, "bomb" = 25, "bio" = 60, "rad" = 20, "fire" = 75, "acid" = 10)
 	actions_types = list(/datum/action/item_action/toggle)
 
 /obj/item/clothing/head/helmet/f13/legion/heavy/attack_self(mob/user)
@@ -327,10 +332,10 @@
 
 /obj/item/clothing/head/helmet/f13/legion/vet/decan
 	name = "legion veteran decanus helmet"
-	desc = "(VI) It's a metal helmet with an array of red, white and black feathers, unmistakably a Veteran Decanus."
+	desc = "(V) It's a metal helmet with an array of red, white and black feathers, unmistakably a Veteran Decanus."
 	icon_state = "legion-decvet-alt"
 	item_state = "legion-decvet-alt"
-	armor = list("tier" = 6, "energy" = 15, "bomb" = 25, "bio" = 50, "rad" = 20, "fire" = 70, "acid" = 0)
+	armor = list("tier" = 5, "energy" = 15, "bomb" = 25, "bio" = 50, "rad" = 20, "fire" = 70, "acid" = 0)
 
 /obj/item/clothing/head/helmet/f13/legion/centurion
 	name = "legion centurion helmet"
@@ -342,10 +347,10 @@
 
 /obj/item/clothing/head/helmet/f13/legion/rangercent
 	name = "ranger-hunter centurion helmet"
-	desc = "(V) The helmet of an NCR ranger, refit to serve as a Centurions helmet."
+	desc = "(VI) The helmet of an NCR ranger, refit to serve as a Centurions helmet."
 	icon_state = "legion-rangercent"
 	item_state = "legion-rangercent"
-	armor = list("tier" = 5, "energy" = 35, "bomb" = 39, "bio" = 60, "rad" = 20, "fire" = 80, "acid" = 0)
+	armor = list("tier" = 6, "energy" = 35, "bomb" = 39, "bio" = 60, "rad" = 20, "fire" = 80, "acid" = 0)
 	resistance_flags = LAVA_PROOF | FIRE_PROOF
 
 /obj/item/clothing/head/helmet/f13/legion/legionriothelmet
@@ -358,7 +363,7 @@
 
 /obj/item/clothing/head/helmet/f13/legion/palacent
 	name = "paladin-slayer centurion helmet"
-	desc = "(VII) The once-marvelous helmet of the T-45d power armor set, repurposed by the Legion into a symbol of its might. It has a large plume of red horse hair across the top of it going horizontally, donoting the rank of Centurion."
+	desc = "(VI) The once-marvelous helmet of the T-45d power armor set, repurposed by the Legion into a symbol of its might. It has a large plume of red horse hair across the top of it going horizontally, donoting the rank of Centurion."
 	icon_state = "legion-palacent"
 	item_state = "legion-palacent"
 	armor = list("tier" = 6, "energy" = 35, "bomb" = 39, "bio" = 60, "rad" = 20, "fire" = 80, "acid" = 0)
@@ -503,7 +508,7 @@
 	icon_state = "ncr_flapcap"
 	item_state = "ncr_flapcap"
 
-/obj/item/clothing/head/f13/ncr_slouch
+/obj/item/clothing/head/f13/ncr/ncr_slouch
 	name = "NCR slouch hat"
 	desc = "(III) An irregular issue NCR sun hat, the left side of the brim is pinned to the crown for ease with shouldering rifles."
 	icon_state = "ncr_slouch"
@@ -516,6 +521,10 @@
 	icon_state = "ncr_officer_beret"
 	item_state = "ncr_officer_beret"
 	armor = list("tier" = 5, "energy" = 20, "bomb" = 25, "bio" = 30, "rad" = 20, "fire" = 60, "acid" = 0)
+
+	/obj/item/clothing/head/beret/ncr/Initialize()
+	. = ..()
+	AddComponent(/datum/component/armor_plate)
 
 /obj/item/clothing/head/beret/ncr/ncr_medic
 	name = "NCR medical beret"
@@ -554,10 +563,10 @@
 
 /obj/item/clothing/head/beret/ncr_sapper
 	name = "NCR Sapper beret"
-	desc = "(V) A grey beret, issued to troopers that have passed Sapper School."
+	desc = "(III) A grey beret, issued to troopers that have passed Sapper School."
 	icon_state = "ncr_sapper_beret"
 	item_state = "ncr_sapper_beret"
-	armor = list("tier" = 5, "energy" = 20, "bomb" = 25, "bio" = 30, "rad" = 20, "fire" = 60, "acid" = 0)
+	armor = list("tier" = 3, "energy" = 20, "bomb" = 25, "bio" = 30, "rad" = 20, "fire" = 60, "acid" = 0)
 
 /obj/item/clothing/head/beret/ncr_sof
 	name = "NCR SOF beret"
@@ -605,17 +614,17 @@
 
 /obj/item/clothing/head/beret/ncr_recon_ranger
 	name = "NCR Ranger scout beret"
-	desc = "(IV) A brown beret, issued to members of the NCR Recon Rangers."
+	desc = "(V) A brown beret, issued to members of the NCR Recon Rangers."
 	icon_state = "scoutberet"
 	item_state = "scoutberet"
-	armor = list("tier" = 4, "energy" = 20, "bomb" = 25, "bio" = 30, "rad" = 20, "fire" = 60, "acid" = 0)
+	armor = list("tier" = 5, "energy" = 20, "bomb" = 25, "bio" = 30, "rad" = 20, "fire" = 60, "acid" = 0)
 
 /obj/item/clothing/head/f13/trailranger
 	name = "NCR trail ranger hat"
-	desc = "(IV) A rustic, homely style cowboy hat worn by NCR trail rangers. Yeehaw!"
+	desc = "(V) A rustic, homely style cowboy hat worn by NCR trail rangers. Yeehaw!"
 	icon_state = "cowboyrang"
 	item_state = "cowboyrang"
-	armor = list("tier" = 4, "energy" = 30, "bomb" = 25, "bio" = 40, "rad" = 40, "fire" = 80, "acid" = 0)
+	armor = list("tier" = 5, "energy" = 30, "bomb" = 25, "bio" = 40, "rad" = 40, "fire" = 80, "acid" = 0)
 
 /obj/item/clothing/head/f13/ranger
 	name = "NCR ranger campaign hat"

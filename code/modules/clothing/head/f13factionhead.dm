@@ -522,7 +522,7 @@
 	item_state = "ncr_officer_beret"
 	armor = list("tier" = 5, "energy" = 20, "bomb" = 25, "bio" = 30, "rad" = 20, "fire" = 60, "acid" = 0)
 
-	/obj/item/clothing/head/beret/ncr/Initialize()
+/obj/item/clothing/head/beret/ncr/Initialize()
 	. = ..()
 	AddComponent(/datum/component/armor_plate)
 

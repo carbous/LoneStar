@@ -508,7 +508,7 @@
 	icon_state = "ncr_flapcap"
 	item_state = "ncr_flapcap"
 
-/obj/item/clothing/head/f13/ncr/ncr_slouch
+/obj/item/clothing/head/f13/ncr_slouch
 	name = "NCR slouch hat"
 	desc = "(III) An irregular issue NCR sun hat, the left side of the brim is pinned to the crown for ease with shouldering rifles."
 	icon_state = "ncr_slouch"
